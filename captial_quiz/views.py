@@ -18,7 +18,6 @@ def home(request):
 
         # get data
         form_data = request.POST
-        print(form_data)
         status, result = checkAnswer(data['data'], form_data.get('Question'), form_data.get('answer'))
 
         return JsonResponse({"success": status, "data": result})
